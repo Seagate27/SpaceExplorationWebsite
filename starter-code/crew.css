@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+/* html{
+    height: 667px;
+} */
+body {
+    background: url(/starter-code/assets/crew/background-crew-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+nav {
+    background-color: #979797;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+nav span {
+    font-weight: bold;
+}
+
+nav ul {
+    margin-top: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px;
+}
+
+.close-svg {
+    float: right;
+    margin: 40px 24px;
+    cursor: pointer;
+}
+
+.hamburger-svg {
+    margin-top: 1em;
+    cursor: pointer;
+}
+
+.open-nav {
+    transform: translateX(0);
+}
+
+
+main {
+    text-align: center;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+}
+
+.title span {
+    font-weight: bold;
+    padding-right: 10px;
+    color: #616476;
+}
+
+.crew-container {
+    border-bottom-style: solid;
+    border-bottom-width: .5px;
+    margin: 0px 24px;
+    border-color: #616476;
+}
+
+main img {
+    width: 177px;
+    height: 222px;
+    margin: 20px 0 -3px 18px;
+}
+
+.dots {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #616476;
+    border-radius: 50%;
+}
+
+#active {
+    background-color: #FFFFFF;
+}
+
+.dots:hover:not(#active) {
+    background-color: #D0D6F9;
+}
+
+.crew {
+    font-family: 'Bellefair', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 20px 0 0px;
+}
+
+.crew span {
+    display: block;
+    font-size: 16px;
+    color: #616476;
+}
+
+main ul {
+    padding: 0;
+}
+
+main ul li {
+    display: inline;
+    padding: 0 5px;
+    list-style: none;
+}
+
+main ul li a {
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+.crew-content {
+    margin: 0px 24px;
+}
+
+.crew-content div:last-child {
+    color: #D0D6F9;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: url(/starter-code/assets/crew/background-crew-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    nav {
+        height: 96px;
+        width: 57%;
+        transform: unset;
+        position: absolute;
+        background-color: #ffffff0c;
+    }
+
+    nav span {
+        font-weight: bold;
+    }
+
+    nav .active-nav {
+        padding-bottom: 35px;
+        border-bottom-style: solid;
+        border-radius: 1px;
+    }
+
+    nav ul li a:hover:not(.active-nav) {
+        padding-bottom: 35px;
+        border-color: #979797;
+        border-bottom-style: solid;
+        border-radius: 1px;
+    }
+
+    nav ul {
+        margin-top: unset;
+        display: flex;
+        margin: 39px 46px 39px 48px;
+        padding: unset;
+    }
+
+    nav ul li {
+        padding: 0 20px;
+    }
+
+    nav ul li a span {
+        display: none;
+    }
+
+    .hamburger-svg {
+        display: none;
+    }
+
+    .close-svg {
+        display: none;
+    }
+
+    .title {
+        grid-area: title;
+    }
+
+    .crew-container {
+        grid-area: crew;
+    }
+
+    .dots-container {
+        grid-area: dots;
+    }
+
+    .content-container {
+        grid-area: content;
+        margin: 0 155px;
+    }
+
+    main {
+        display: grid;
+        grid-template-areas:
+            'title'
+            'content'
+            'dots'
+            'crew'
+        ;
+
+    }
+
+    .title {
+        font-size: 20px;
+        text-align: left;
+        margin: 39px;
+    }
+
+    .crew-container {
+        border-bottom-style: none;
+        margin: unset;
+    }
+
+    .crew {
+        font-size: 40px;
+    }
+
+    .crew span {
+        font-size: 24px;
+    }
+
+    main img {
+        width: 456.37px;
+        height: 532px;
+        margin: 15px 170px 0;
+    }
+}
+
+@media only screen and (min-width: 1440px) {
+    body {
+        background: url(/starter-code/assets/crew/background-crew-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 900px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a span {
+        display: unset;
+    }
+    .title {
+        grid-area: title;
+    }
+
+    .crew-container {
+        grid-area: crew;
+    }
+
+    .dots-container {
+        grid-area: dots;
+    }
+
+    .content-container {
+        grid-area: content;
+        margin: 0 155px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto auto;
+        grid-template-areas:
+            'title crew'
+            'content crew'
+            'dots crew'
+        ;
+        height: auto;
+        text-align: left;
+    }
+    .title-container{
+        margin: 0 0 0 115px;
+    }
+    .title {
+        font-size: 28px;
+        margin: 60px 0 0;
+    }
+    .content-container{
+        margin: 0 0 0 115px;
+    }
+    .crew-content {
+        margin: unset;
+    }
+    .dots-container{
+        margin: 0 0 0 115px;
+    }
+    .crew{
+        font-size: 56px;
+    }
+    .crew span{
+        font-size: 32px;
+    }
+    .crew-content div p:last-child{
+        font-size: 18px;
+        margin-right: 120px;
+    }
+    main img {
+        width: 568px;
+        height: 712px;
+        margin: 115px 0 0 50px;
+    } 
+    .dots-container ul{
+        margin: 0;
+    }
+}

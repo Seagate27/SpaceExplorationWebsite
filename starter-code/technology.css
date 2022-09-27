@@ -1,0 +1,283 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed&family=Bellefair&display=swap');
+
+/* font-family: 'Barlow Condensed', sans-serif;
+font-family: 'Bellefair', serif; */
+/* html{
+    height: 667px;
+} */
+body {
+    background: url(/starter-code/assets/technology/background-technology-mobile.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+
+nav {
+    background-color: #979797;
+    height: 100vh;
+    width: 70%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    transform: translateX(100%);
+    transition: transform .5s ease-in-out;
+}
+
+nav span {
+    font-weight: bold;
+}
+
+nav ul {
+    margin-top: 100px;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px;
+}
+
+.close-svg {
+    float: right;
+    margin: 40px 24px;
+    cursor: pointer;
+}
+
+.hamburger-svg {
+    margin-top: 1em;
+    cursor: pointer;
+}
+.open-nav{
+    transform: translateX(0);
+}
+
+
+main {
+    text-align: center;
+}
+
+.title {
+    text-transform: uppercase;
+    letter-spacing: 2.7px;
+}
+
+.title span {
+    font-weight: bold;
+    padding-right: 10px;
+    color: #616476;
+}
+
+main img {
+    width: 100%;
+    height: 170px;
+}
+
+.dots{
+    /* display: inline-block; */
+    width: 40px;
+    height: 40px;
+    background-color: #0B0D17;
+    border: solid;
+    border-color: #616476;
+    border-width: 1px;
+    border-radius: 50%;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+#active {
+    background-color: #FFFFFF;
+    color:  #0B0D17;
+    border-color: #FFFFFF;
+}
+
+.dots:hover:not(#active) {
+    border-color: #FFFFFF;
+}
+.crew {
+    font-family: 'Bellefair', serif;
+    font-size: 24px;
+    text-transform: uppercase;
+    margin: 20px 0 0px;
+}
+.crew span{
+    display: block;
+    font-size: 16px;
+    color: #616476;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+main ul {
+    padding: 0;
+}
+
+main ul li {
+    display: inline;
+    padding: 0 5px;
+    list-style: none;
+}
+
+.crew-content {
+    margin: 0px 24px;
+}
+.crew-content div:last-child{
+    color: #D0D6F9;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        background: url(/starter-code/assets/technology/background-technology-tablet.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    nav {
+        height: 96px;
+        width: 57%;
+        transform: unset;
+        position: absolute;
+        background-color: #ffffff0c;
+    }
+
+    nav span {
+        font-weight: bold;
+    }
+
+    nav .active-nav {
+        padding-bottom: 35px;
+        border-bottom-style: solid;
+        border-radius: 1px;
+
+    }
+    nav ul li a:hover:not(.active-nav) {
+        padding-bottom: 35px;
+        border-color: #979797;
+        border-bottom-style: solid;
+        border-radius: 1px;
+    }
+    nav ul {
+        margin-top: unset;
+        display: flex;
+        margin: 39px 46px 39px 48px;
+        padding: unset;
+    }
+
+    nav ul li {
+        padding: 0 20px;
+    }
+
+    nav ul li a span {
+        display: none;
+    }
+
+    .hamburger-svg {
+        display: none;
+    }
+
+    .close-svg {
+        display: none;
+    }
+
+    
+    main img {
+        width: 100%;
+        height: 310px;
+    }
+    .title {
+        font-size: 20px;
+        text-align: left;
+        margin: 39px;
+    }
+    .crew-content {
+        margin: 0px 155px;
+    }
+}
+
+@media only screen and (min-width: 1440px){
+    body {
+        background: url(/starter-code/assets/technology/background-technology-desktop.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 900px;
+    }
+
+    nav ul li {
+        width: 100%;
+    }
+
+    nav ul li a span {
+        display: unset;
+    }
+    .title-container{
+        grid-area: title;
+    }
+    .crew-container{
+        grid-area: crew;
+    }
+    .dots-container{
+        grid-area: dots;
+    }
+    .crew-content{
+        grid-area: content;
+    }
+    main{
+        display: grid;
+        grid-template-columns: 20% 40% 40%;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        'title title .'
+        'dots content crew'
+        ;
+        margin-top: 100px;
+
+    }
+    main ul li{
+        display: block;
+        padding-bottom: 32px;
+    }
+    main img {
+        width: 515px;
+        height: 527px;
+        margin-top: 26px;
+    }
+    .crew-container{
+        text-align: right;
+    }
+    .title {
+        font-size: 28px;
+        text-align: left;
+        margin: 76px 0 0 166px;
+    }
+    .dots-container{
+        margin-top: 137px;
+    }
+    .dots{
+        width: 80px;
+        height: 80px;
+        font-size: 32px;
+    }
+    .crew-content{
+        text-align: left;
+        margin: 137px 100px 0 0;
+    }
+    .crew-content p:first-child{
+        font-size: 56px;
+    }
+    .crew-content p:last-child{
+        font-size: 18px;
+        margin-right: 70px;
+    }
+}
